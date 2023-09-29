@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F2023BE29FFE8130027A9C1 /* NewSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2023BD29FFE8130027A9C1 /* NewSessionView.swift */; };
+		8F3295FC2A3C968100CEC3A5 /* LiveTrackDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3295FB2A3C968100CEC3A5 /* LiveTrackDayViewModel.swift */; };
+		8F58FCE3299D24ED008A9F07 /* track_tel_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F58FCE2299D24ED008A9F07 /* track_tel_iosApp.swift */; };
+		8F58FCE7299D24ED008A9F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F58FCE6299D24ED008A9F07 /* Assets.xcassets */; };
+		8F58FCEA299D24ED008A9F07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F58FCE9299D24ED008A9F07 /* Preview Assets.xcassets */; };
+		8F6BBED7299D258900801E19 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBED6299D258900801E19 /* Track.swift */; };
+		8F6BBED9299D259B00801E19 /* TrackDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBED8299D259B00801E19 /* TrackDay.swift */; };
+		8F6BBEDD299D25ED00801E19 /* NewTrackDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEDC299D25ED00801E19 /* NewTrackDayView.swift */; };
+		8F6BBEDF299D25F800801E19 /* LiveTrackDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEDE299D25F800801E19 /* LiveTrackDayView.swift */; };
+		8F6BBEE2299D260B00801E19 /* PastTrackDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEE1299D260B00801E19 /* PastTrackDayView.swift */; };
+		8F6BBEE4299D262700801E19 /* SpeedometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEE3299D262700801E19 /* SpeedometerView.swift */; };
+		8F6BBEE8299E3F0C00801E19 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEE7299E3F0C00801E19 /* WelcomeView.swift */; };
+		8F6BBEEA299E691700801E19 /* SessionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEE9299E691700801E19 /* SessionDetailView.swift */; };
+		8F6BBEED299E6BA900801E19 /* SessionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEEC299E6BA900801E19 /* SessionListView.swift */; };
+		8F6BBEEF299E90F700801E19 /* Speedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEEE299E90F700801E19 /* Speedometer.swift */; };
+		8F6BBEF2299FB5C000801E19 /* AllTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEF1299FB5C000801E19 /* AllTracks.swift */; };
+		8F6BBEF4299FC19E00801E19 /* TrackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEF3299FC19E00801E19 /* TrackData.swift */; };
+		8FC1FC6D2A3F49BF00609EE5 /* GeofenceTimingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC1FC6C2A3F49BF00609EE5 /* GeofenceTimingManager.swift */; };
+		8FC1FC712A3F4B4600609EE5 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC1FC702A3F4B4600609EE5 /* Stopwatch.swift */; };
+		8FC5D9D62A459FA800D02DDA /* TrackLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5D9D52A459FA800D02DDA /* TrackLocation.swift */; };
+		8FC5D9D82A45A05C00D02DDA /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5D9D72A45A05C00D02DDA /* LocationData.swift */; };
+		8FC5D9DA2A45A06E00D02DDA /* AllLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5D9D92A45A06E00D02DDA /* AllLocations.swift */; };
+		8FC5D9DC2A45BF2300D02DDA /* SelectTrackLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5D9DB2A45BF2300D02DDA /* SelectTrackLayoutView.swift */; };
+		8FD6D9A629A2574E00DCF5D6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD6D9A529A2574E00DCF5D6 /* Utility.swift */; };
+		8FD6D9A829A259B000DCF5D6 /* TestTrackDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD6D9A729A259B000DCF5D6 /* TestTrackDays.swift */; };
+		8FD6D9AA29A25BBD00DCF5D6 /* TrackDayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD6D9A929A25BBD00DCF5D6 /* TrackDayData.swift */; };
+		8FD6D9AE29A2886C00DCF5D6 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD6D9AD29A2886C00DCF5D6 /* AppColor.swift */; };
+		8FF6752229C9BD9900FCBE8E /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF6752129C9BD9900FCBE8E /* LocationDataManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8F2023BD29FFE8130027A9C1 /* NewSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessionView.swift; sourceTree = "<group>"; };
+		8F3295FB2A3C968100CEC3A5 /* LiveTrackDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTrackDayViewModel.swift; sourceTree = "<group>"; };
+		8F3295FD2A3EF5A400CEC3A5 /* track-tel-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "track-tel-ios-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8F58FCDF299D24ED008A9F07 /* track_tel_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = track_tel_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F58FCE2299D24ED008A9F07 /* track_tel_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = track_tel_iosApp.swift; sourceTree = "<group>"; };
+		8F58FCE6299D24ED008A9F07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F58FCE9299D24ED008A9F07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8F6BBED6299D258900801E19 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		8F6BBED8299D259B00801E19 /* TrackDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDay.swift; sourceTree = "<group>"; };
+		8F6BBEDC299D25ED00801E19 /* NewTrackDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrackDayView.swift; sourceTree = "<group>"; };
+		8F6BBEDE299D25F800801E19 /* LiveTrackDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTrackDayView.swift; sourceTree = "<group>"; };
+		8F6BBEE1299D260B00801E19 /* PastTrackDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTrackDayView.swift; sourceTree = "<group>"; };
+		8F6BBEE3299D262700801E19 /* SpeedometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedometerView.swift; sourceTree = "<group>"; };
+		8F6BBEE7299E3F0C00801E19 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		8F6BBEE9299E691700801E19 /* SessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailView.swift; sourceTree = "<group>"; };
+		8F6BBEEC299E6BA900801E19 /* SessionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListView.swift; sourceTree = "<group>"; };
+		8F6BBEEE299E90F700801E19 /* Speedometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speedometer.swift; sourceTree = "<group>"; };
+		8F6BBEF1299FB5C000801E19 /* AllTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTracks.swift; sourceTree = "<group>"; };
+		8F6BBEF3299FC19E00801E19 /* TrackData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackData.swift; sourceTree = "<group>"; };
+		8FC1FC6C2A3F49BF00609EE5 /* GeofenceTimingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceTimingManager.swift; sourceTree = "<group>"; };
+		8FC1FC702A3F4B4600609EE5 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		8FC5D9D22A41C2F900D02DDA /* anglessey2.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = anglessey2.gpx; sourceTree = "<group>"; };
+		8FC5D9D42A42FF8F00D02DDA /* silverstone.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = silverstone.gpx; sourceTree = "<group>"; };
+		8FC5D9D52A459FA800D02DDA /* TrackLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLocation.swift; sourceTree = "<group>"; };
+		8FC5D9D72A45A05C00D02DDA /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		8FC5D9D92A45A06E00D02DDA /* AllLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLocations.swift; sourceTree = "<group>"; };
+		8FC5D9DB2A45BF2300D02DDA /* SelectTrackLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTrackLayoutView.swift; sourceTree = "<group>"; };
+		8FD6D9A529A2574E00DCF5D6 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		8FD6D9A729A259B000DCF5D6 /* TestTrackDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTrackDays.swift; sourceTree = "<group>"; };
+		8FD6D9A929A25BBD00DCF5D6 /* TrackDayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDayData.swift; sourceTree = "<group>"; };
+		8FD6D9AD29A2886C00DCF5D6 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		8FEB86AC2A4AF9A100F98733 /* llandow.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = llandow.gpx; sourceTree = "<group>"; };
+		8FF6752129C9BD9900FCBE8E /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F58FCDC299D24ED008A9F07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F58FCD6299D24ED008A9F07 = {
+			isa = PBXGroup;
+			children = (
+				8FEB86AC2A4AF9A100F98733 /* llandow.gpx */,
+				8FC5D9D42A42FF8F00D02DDA /* silverstone.gpx */,
+				8FC5D9D22A41C2F900D02DDA /* anglessey2.gpx */,
+				8FF6752129C9BD9900FCBE8E /* LocationDataManager.swift */,
+				8F58FCE1299D24ED008A9F07 /* track_tel_ios */,
+				8F58FCE0299D24ED008A9F07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F58FCE0299D24ED008A9F07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F58FCDF299D24ED008A9F07 /* track_tel_ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F58FCE1299D24ED008A9F07 /* track_tel_ios */ = {
+			isa = PBXGroup;
+			children = (
+				8F3295FD2A3EF5A400CEC3A5 /* track-tel-ios-Info.plist */,
+				8FD6D9A429A2573700DCF5D6 /* Utility */,
+				8F6BBEF0299FB5B300801E19 /* Data */,
+				8F6BBED5299D256A00801E19 /* Models */,
+				8F6BBED3299D253600801E19 /* Views */,
+				8F58FCF0299D2511008A9F07 /* ViewModels */,
+				8F58FCE2299D24ED008A9F07 /* track_tel_iosApp.swift */,
+				8F58FCE6299D24ED008A9F07 /* Assets.xcassets */,
+				8F58FCE8299D24ED008A9F07 /* Preview Content */,
+			);
+			path = track_tel_ios;
+			sourceTree = "<group>";
+		};
+		8F58FCE8299D24ED008A9F07 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8F58FCE9299D24ED008A9F07 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8F58FCF0299D2511008A9F07 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BBEF3299FC19E00801E19 /* TrackData.swift */,
+				8FD6D9A929A25BBD00DCF5D6 /* TrackDayData.swift */,
+				8FD6D9AD29A2886C00DCF5D6 /* AppColor.swift */,
+				8F3295FB2A3C968100CEC3A5 /* LiveTrackDayViewModel.swift */,
+				8FC5D9D72A45A05C00D02DDA /* LocationData.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8F6BBED3299D253600801E19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BBEDB299D25D700801E19 /* Speedometer */,
+				8F6BBEDA299D25B700801E19 /* Trackday */,
+				8F6BBEE7299E3F0C00801E19 /* WelcomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8F6BBED5299D256A00801E19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BBED6299D258900801E19 /* Track.swift */,
+				8F6BBED8299D259B00801E19 /* TrackDay.swift */,
+				8FC5D9D52A459FA800D02DDA /* TrackLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8F6BBEDA299D25B700801E19 /* Trackday */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BBEEB299E6B5D00801E19 /* Session */,
+				8F2023BD29FFE8130027A9C1 /* NewSessionView.swift */,
+				8F6BBEDC299D25ED00801E19 /* NewTrackDayView.swift */,
+				8F6BBEDE299D25F800801E19 /* LiveTrackDayView.swift */,
+				8F6BBEE1299D260B00801E19 /* PastTrackDayView.swift */,
+				8FC5D9DB2A45BF2300D02DDA /* SelectTrackLayoutView.swift */,
+			);
+			path = Trackday;
+			sourceTree = "<group>";
+		};
+		8F6BBEDB299D25D700801E19 /* Speedometer */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BBEE3299D262700801E19 /* SpeedometerView.swift */,
+			);
+			path = Speedometer;
+			sourceTree = "<group>";
+		};
+		8F6BBEEB299E6B5D00801E19 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BBEE9299E691700801E19 /* SessionDetailView.swift */,
+				8F6BBEEC299E6BA900801E19 /* SessionListView.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		8F6BBEF0299FB5B300801E19 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BBEF1299FB5C000801E19 /* AllTracks.swift */,
+				8FD6D9A729A259B000DCF5D6 /* TestTrackDays.swift */,
+				8FC5D9D92A45A06E00D02DDA /* AllLocations.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8FD6D9A429A2573700DCF5D6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8FC1FC6C2A3F49BF00609EE5 /* GeofenceTimingManager.swift */,
+				8FC1FC702A3F4B4600609EE5 /* Stopwatch.swift */,
+				8F6BBEEE299E90F700801E19 /* Speedometer.swift */,
+				8FD6D9A529A2574E00DCF5D6 /* Utility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F58FCDE299D24ED008A9F07 /* track_tel_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F58FCED299D24ED008A9F07 /* Build configuration list for PBXNativeTarget "track_tel_ios" */;
+			buildPhases = (
+				8F58FCDB299D24ED008A9F07 /* Sources */,
+				8F58FCDC299D24ED008A9F07 /* Frameworks */,
+				8F58FCDD299D24ED008A9F07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = track_tel_ios;
+			productName = track_tel_ios;
+			productReference = 8F58FCDF299D24ED008A9F07 /* track_tel_ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F58FCD7299D24ED008A9F07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8F58FCDE299D24ED008A9F07 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 8F58FCDA299D24ED008A9F07 /* Build configuration list for PBXProject "track_tel_ios" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F58FCD6299D24ED008A9F07;
+			productRefGroup = 8F58FCE0299D24ED008A9F07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F58FCDE299D24ED008A9F07 /* track_tel_ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F58FCDD299D24ED008A9F07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F58FCEA299D24ED008A9F07 /* Preview Assets.xcassets in Resources */,
+				8F58FCE7299D24ED008A9F07 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F58FCDB299D24ED008A9F07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC5D9D82A45A05C00D02DDA /* LocationData.swift in Sources */,
+				8FD6D9A629A2574E00DCF5D6 /* Utility.swift in Sources */,
+				8FC5D9DC2A45BF2300D02DDA /* SelectTrackLayoutView.swift in Sources */,
+				8F6BBEF4299FC19E00801E19 /* TrackData.swift in Sources */,
+				8F6BBEEA299E691700801E19 /* SessionDetailView.swift in Sources */,
+				8FC1FC6D2A3F49BF00609EE5 /* GeofenceTimingManager.swift in Sources */,
+				8F6BBEE4299D262700801E19 /* SpeedometerView.swift in Sources */,
+				8FC5D9D62A459FA800D02DDA /* TrackLocation.swift in Sources */,
+				8F6BBED9299D259B00801E19 /* TrackDay.swift in Sources */,
+				8F6BBEF2299FB5C000801E19 /* AllTracks.swift in Sources */,
+				8FD6D9AE29A2886C00DCF5D6 /* AppColor.swift in Sources */,
+				8F6BBEED299E6BA900801E19 /* SessionListView.swift in Sources */,
+				8F2023BE29FFE8130027A9C1 /* NewSessionView.swift in Sources */,
+				8F6BBEDF299D25F800801E19 /* LiveTrackDayView.swift in Sources */,
+				8FC5D9DA2A45A06E00D02DDA /* AllLocations.swift in Sources */,
+				8F6BBEE8299E3F0C00801E19 /* WelcomeView.swift in Sources */,
+				8F6BBEE2299D260B00801E19 /* PastTrackDayView.swift in Sources */,
+				8FD6D9AA29A25BBD00DCF5D6 /* TrackDayData.swift in Sources */,
+				8F58FCE3299D24ED008A9F07 /* track_tel_iosApp.swift in Sources */,
+				8FC1FC712A3F4B4600609EE5 /* Stopwatch.swift in Sources */,
+				8F6BBEDD299D25ED00801E19 /* NewTrackDayView.swift in Sources */,
+				8FD6D9A829A259B000DCF5D6 /* TestTrackDays.swift in Sources */,
+				8F3295FC2A3C968100CEC3A5 /* LiveTrackDayViewModel.swift in Sources */,
+				8F6BBEEF299E90F700801E19 /* Speedometer.swift in Sources */,
+				8FF6752229C9BD9900FCBE8E /* LocationDataManager.swift in Sources */,
+				8F6BBED7299D258900801E19 /* Track.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8F58FCEB299D24ED008A9F07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F58FCEC299D24ED008A9F07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F58FCEE299D24ED008A9F07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"track_tel_ios/Preview Content\"";
+				DEVELOPMENT_TEAM = XJZAMV56MK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "track-tel-ios-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Track Tel";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "In order to time your laps, we will need your phones location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "In order to time your laps, we will need your phones location";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "witcombdevelopment.track-tel-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F58FCEF299D24ED008A9F07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"track_tel_ios/Preview Content\"";
+				DEVELOPMENT_TEAM = XJZAMV56MK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "track-tel-ios-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Track Tel";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "In order to time your laps, we will need your phones location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "In order to time your laps, we will need your phones location";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "witcombdevelopment.track-tel-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F58FCDA299D24ED008A9F07 /* Build configuration list for PBXProject "track_tel_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F58FCEB299D24ED008A9F07 /* Debug */,
+				8F58FCEC299D24ED008A9F07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F58FCED299D24ED008A9F07 /* Build configuration list for PBXNativeTarget "track_tel_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F58FCEE299D24ED008A9F07 /* Debug */,
+				8F58FCEF299D24ED008A9F07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F58FCD7299D24ED008A9F07 /* Project object */;
+}
