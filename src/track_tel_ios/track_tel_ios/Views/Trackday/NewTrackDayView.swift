@@ -30,25 +30,20 @@ struct NewTrackDayView: View {
             let location = locationManager.location
             var trackLocation = TrackLocation()
             
-            List{
-                
-                Section(header: Text("Nearest Track").foregroundColor(.black)){
+            ScrollView{
+                LazyVGrid(columns: [GridItem(.flexible())]){
                     TrackListItem(location: findNearestLocation(myLocation: location!, locations: locationData.locations), tappable: true)
+                        .padding()
                 }
-                .listRowBackground(Color.swimShortBlue)
-                .foregroundColor(.white)
-                Section(header: Text("All Tracks A-Z").foregroundColor(.black)){
-                    ForEach(locations){location in
-                    
+                LazyVGrid(columns: [GridItem(.flexible())]){
+                    ForEach(locations) { location in
                         TrackListItem(location: location, tappable: false)
+                            .padding()
                     }
-                    .listRowBackground(Color.swimShortBlue)
-                    .foregroundColor(.white)
-                    
                 }
-                
             }
         }
+        .navigationTitle("New Track Day")
         .onAppear{
             locationManager.requestAlwaysAuthorization()
             trackData.loadTracks()
@@ -84,7 +79,7 @@ struct TrackListItem: View {
 
     
     var body: some View {
-        
+    
         VStack{
             HStack{
                 VStack(alignment: .leading){
@@ -115,6 +110,10 @@ struct TrackListItem: View {
                 TrackCard(track: location.tracks[selectedTrackIndex])
             }
         }
+        .padding()
+        .background(Color.accentTeal.opacity(0.2))
+        .cornerRadius(10)
+
     }
 }
 

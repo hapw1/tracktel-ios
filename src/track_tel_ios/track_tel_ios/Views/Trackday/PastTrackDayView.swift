@@ -14,25 +14,27 @@ struct PastTrackDayView: View {
     
 
     var body: some View {
-        
-        List{
-            ForEach(trackDayData.trackDays){trackday in
-                
-                NavigationLink(
-                    destination: SessionListView(sessions: trackday.sessions)
-                        //.environmentObject(trackDayData)
-                    ,
-                    label: {TrackDayCard(trackDay: trackday)
-                    })
+        ScrollView {
+            LazyVGrid(columns: [GridItem(.flexible())]){
+                ForEach(trackDayData.trackDays) { trackday in
+                    NavigationLink(
+                        destination: SessionListView(sessions: trackday.sessions)
+                            //.environmentObject(trackDayData)
+                        ,
+                        label: {TrackDayCard(trackDay: trackday)
+                        })
+                    .padding()
+                }
             }
-            .listRowBackground(Color.swimShortBlue)
-            .foregroundColor(.white)
+            .padding()
+            .foregroundColor(.black)
         }
+        
+        .navigationTitle("Past Track Days")
         .onAppear{
             trackDayData.loadTrackDays()
         }
         .listStyle(.automatic)
-        .background(Color.white)
         .scrollContentBackground(.hidden)
     }
 }
@@ -96,6 +98,9 @@ struct TrackDayCard: View {
             }
             
         }
+        .padding()
+        .background(Color.accentTeal.opacity(0.2))
+        .cornerRadius(10)
     }
 }
 

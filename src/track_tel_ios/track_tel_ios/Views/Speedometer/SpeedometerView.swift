@@ -126,14 +126,14 @@ struct SpeedometerPortraitView: View {
                         Text("Return to Home")
                             .foregroundColor(.white)
                             .padding()
-                            .background(Color.swimShortBlue)
+                            .background(Color.blue)
                             .clipShape(Capsule())
                         
                     }else {
                         Text("Start")
                             .foregroundColor(.white)
                             .padding()
-                            .background(Color.swimShortBlue)
+                            .background(Color.blue)
                             .clipShape(Capsule())
                     }
                     
@@ -165,8 +165,8 @@ struct InformationView: View {
 
         }
         .padding()
-        .foregroundColor(.white)
-        .background(Color.swimShortBlue.ignoresSafeArea())
+        .foregroundColor(.black)
+        .background(Color.accentTeal.ignoresSafeArea().opacity(0.2))
         .cornerRadius(15)
         
 
