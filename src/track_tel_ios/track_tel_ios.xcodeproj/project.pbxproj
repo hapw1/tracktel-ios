@@ -24,6 +24,7 @@
 		8F6BBEEF299E90F700801E19 /* Speedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEEE299E90F700801E19 /* Speedometer.swift */; };
 		8F6BBEF2299FB5C000801E19 /* AllTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEF1299FB5C000801E19 /* AllTracks.swift */; };
 		8F6BBEF4299FC19E00801E19 /* TrackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BBEF3299FC19E00801E19 /* TrackData.swift */; };
+		8FAC3A352BC28C6100F17111 /* TrackLayoutSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC3A342BC28C6100F17111 /* TrackLayoutSelectView.swift */; };
 		8FC1FC6D2A3F49BF00609EE5 /* GeofenceTimingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC1FC6C2A3F49BF00609EE5 /* GeofenceTimingManager.swift */; };
 		8FC1FC712A3F4B4600609EE5 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC1FC702A3F4B4600609EE5 /* Stopwatch.swift */; };
 		8FC5D9D62A459FA800D02DDA /* TrackLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC5D9D52A459FA800D02DDA /* TrackLocation.swift */; };
@@ -57,6 +58,7 @@
 		8F6BBEEE299E90F700801E19 /* Speedometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speedometer.swift; sourceTree = "<group>"; };
 		8F6BBEF1299FB5C000801E19 /* AllTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTracks.swift; sourceTree = "<group>"; };
 		8F6BBEF3299FC19E00801E19 /* TrackData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackData.swift; sourceTree = "<group>"; };
+		8FAC3A342BC28C6100F17111 /* TrackLayoutSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLayoutSelectView.swift; sourceTree = "<group>"; };
 		8FC1FC6C2A3F49BF00609EE5 /* GeofenceTimingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceTimingManager.swift; sourceTree = "<group>"; };
 		8FC1FC702A3F4B4600609EE5 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		8FC5D9D22A41C2F900D02DDA /* anglessey2.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = anglessey2.gpx; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				8F6BBEEB299E6B5D00801E19 /* Session */,
 				8F2023BD29FFE8130027A9C1 /* NewSessionView.swift */,
 				8F6BBEDC299D25ED00801E19 /* NewTrackDayView.swift */,
+				8FAC3A342BC28C6100F17111 /* TrackLayoutSelectView.swift */,
 				8F6BBEDE299D25F800801E19 /* LiveTrackDayView.swift */,
 				8F6BBEE1299D260B00801E19 /* PastTrackDayView.swift */,
 				8FC5D9DB2A45BF2300D02DDA /* SelectTrackLayoutView.swift */,
@@ -306,6 +309,7 @@
 				8F3295FC2A3C968100CEC3A5 /* LiveTrackDayViewModel.swift in Sources */,
 				8F6BBEEF299E90F700801E19 /* Speedometer.swift in Sources */,
 				8FF6752229C9BD9900FCBE8E /* LocationDataManager.swift in Sources */,
+				8FAC3A352BC28C6100F17111 /* TrackLayoutSelectView.swift in Sources */,
 				8F6BBED7299D258900801E19 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

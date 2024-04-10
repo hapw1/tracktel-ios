@@ -32,14 +32,19 @@ struct NewTrackDayView: View {
             
             ScrollView{
                 LazyVGrid(columns: [GridItem(.flexible())]){
-                    TrackListItem(location: findNearestLocation(myLocation: location!, locations: locationData.locations), tappable: true)
-                        .padding()
+                    //TrackListItem(location: findNearestLocation(myLocation: location!, locations: locationData.locations), tappable: true)
+                    //    .padding()
+                    //TrackCard2(track: trackData.tracks[11])
                 }
-                LazyVGrid(columns: [GridItem(.flexible())]){
-                    ForEach(locations) { location in
-                        TrackListItem(location: location, tappable: false)
-                            .padding()
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]){
+                    //ForEach(locations) { location in
+                    //    TrackListItem(location: location, tappable: false)
+                    //        .padding()
+                    //}
+                    ForEach(locationData.locations) { location in
+                        TrackCard3(trackLocation: location)
                     }
+                    
                 }
             }
         }
@@ -80,39 +85,37 @@ struct TrackListItem: View {
     
     var body: some View {
     
-        VStack{
-            HStack{
-                VStack(alignment: .leading){
-                    Text(location.name)
-                        .font(.system(size: 26))
-                        .fontWeight(.light)
-                    Text("\(location.layouts) layouts")
-                        .font(.system(size: 20))
-                        .fontWeight(.ultraLight)
-                }
-                Spacer()
-                Button(
-                    action: {
-                        isExpanded.toggle()
-                    },
-                    label: {
-                        if isExpanded {
-                            Text("Hide Layouts")
-                        }else {
-                            Text("Show Layouts")
-                        }
+        HStack{
+            VStack(alignment: .leading){
+                Text(location.name)
+                    .font(.system(size: 26))
+                    .fontWeight(.light)
+                Text("\(location.layouts) layouts")
+                    .font(.system(size: 20))
+                    .fontWeight(.ultraLight)
+            }
+            Spacer()
+            Button(
+                action: {
+                    isExpanded.toggle()
+                },
+                label: {
+                    if isExpanded {
+                        Text("Hide Layouts")
+                    }else {
+                        Text("Show Layouts")
                     }
-                )
-                .buttonStyle(.bordered)
-            }
-            if isExpanded {
-                LayoutPicker(currentLayoutIndex: $selectedTrackIndex, trackLocation: location, tappable: tappable)
-                TrackCard(track: location.tracks[selectedTrackIndex])
-            }
+                }
+            )
+            .buttonStyle(.bordered)
         }
-        .padding()
-        .background(Color.accentTeal.opacity(0.2))
-        .cornerRadius(10)
+        if isExpanded {
+            LayoutPicker(currentLayoutIndex: $selectedTrackIndex, trackLocation: location, tappable: tappable)
+            TrackCard(track: location.tracks[selectedTrackIndex])
+        }
+        //.padding()
+        //.background(Color.accentTeal.opacity(0.2))
+        //.cornerRadius(10)
 
     }
 }
@@ -164,6 +167,56 @@ struct LayoutPicker: View {
             
         )
         
+    }
+}
+
+struct TrackCard3: View {
+    //let track: Track
+    let trackLocation: TrackLocation
+    var body: some View {
+        VStack(alignment: .leading){
+            
+            NavigationLink(
+                destination: TrackLayoutSelectView(trackLocation: trackLocation),
+                label: {
+                    Image(trackLocation.image)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 150, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .clipped()
+                })
+
+            Text(trackLocation.name)
+                .font(.headline)
+            Text(trackLocation.place)
+                .font(.caption)
+        }
+    }
+}
+
+struct TrackCard2: View {
+    let track: Track
+    let trackLocation: TrackLocation
+    var body: some View {
+        VStack(alignment: .leading){
+            
+            NavigationLink(
+                destination: TrackLayoutSelectView(trackLocation: trackLocation),
+                label: {
+                    Image(track.trackInformation.layout)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 150, height: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .clipped()
+                })
+
+            Text(track.trackInformation.name)
+                .font(.headline)
+            Text(track.trackInformation.place)
+                .font(.caption)
+        }
     }
 }
 

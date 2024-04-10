@@ -10,22 +10,7 @@ import Foundation
 extension TrackLocation {
     
     static let allTracks: [Track] = [
-        
-        
-        
-        
-       
-        
-        
-        
-       
-        
-        
-       
-      
-        
-        
-       
+
     ]
     
     
@@ -34,6 +19,8 @@ extension TrackLocation {
         //Abingdon
         TrackLocation(
             name: "Abingdon",
+            place: "Leicestershire",
+            image: "abingdonimage",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -62,6 +49,8 @@ extension TrackLocation {
         //Anglesey
         TrackLocation(
             name: "Anglesey",
+            place: "North Wales",
+            image: "angleseycircuitimage",
             layouts: 4,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -158,6 +147,8 @@ extension TrackLocation {
         //Bedford
         TrackLocation(
             name: "Bedford Autodrome",
+            place: "Bedfordshire",
+            image: "bedfordautodromeimage",
             layouts: 5,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -277,6 +268,8 @@ extension TrackLocation {
         //Blyton Park
         TrackLocation(
             name: "Blyton Park",
+            place: "Lincolnshire",
+            image: "blytonparkimage",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -304,6 +297,8 @@ extension TrackLocation {
         //Brands Hatch
         TrackLocation(
             name: "Brands Hatch",
+            place: "Kent",
+            image: "brandshatchimage",
             layouts: 2,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -354,6 +349,8 @@ extension TrackLocation {
         //Cadwell Park
         TrackLocation(
             name: "Cadwell Park",
+            place: "Lincolnshire",
+            image: "cadwellparkimage",
             layouts: 3,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -427,6 +424,8 @@ extension TrackLocation {
         //Castle Combe
         TrackLocation(
             name: "Castle Combe",
+            place: "Wiltshire",
+            image: "castlecombeimage",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -454,6 +453,8 @@ extension TrackLocation {
         //Croft
         TrackLocation(
             name: "Croft",
+            place: "North Yorkshire",
+            image: "croftcircuitimage",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -481,6 +482,8 @@ extension TrackLocation {
         //Donington
         TrackLocation(
             name: "Donington",
+            place: "Leicestershire",
+            image: "doningtonparkimage",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -508,6 +511,8 @@ extension TrackLocation {
         //Goodwood
         TrackLocation(
             name: "Goodwood Estate",
+            place: "Chichester",
+            image: "goodwoodcircuitimage",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -535,6 +540,8 @@ extension TrackLocation {
         //Great Tew Estate
         TrackLocation(
             name: "Great Tew Estate",
+            place: "Oxford",
+            image: "",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -553,6 +560,8 @@ extension TrackLocation {
         //Jurby
         TrackLocation(
             name: "Jurby",
+            place: "Isle of Man",
+            image: "",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -571,6 +580,8 @@ extension TrackLocation {
         //Kirkistown
         TrackLocation(
             name: "Kirkistown",
+            place: "Northern Ireland",
+            image: "kirkistownimage",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -598,6 +609,8 @@ extension TrackLocation {
         //Knockhill
         TrackLocation(
             name: "Knockhill Cirucit",
+            place: "Scotland",
+            image: "knockhillimage",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -625,6 +638,8 @@ extension TrackLocation {
         //LLandow
         TrackLocation(
             name: "Llandow",
+            place: "South Wales",
+            image: "",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -643,6 +658,8 @@ extension TrackLocation {
         //Lydden Hill
         TrackLocation(
             name: "Lydden Hill",
+            place: "Kent",
+            image: "lyddenhillimage",
             layouts: 1,
             tracks: [ Track(
                 trackInformation: TrackInformation(
@@ -670,6 +687,8 @@ extension TrackLocation {
         //Mallory Park
         TrackLocation(
             name: "Mallory Park",
+            place: "Leicestershire",
+            image: "malloryparkimage",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -697,6 +716,8 @@ extension TrackLocation {
         //Mondello Park
         TrackLocation(
             name: "Mondello Park",
+            place: "Northern Ireland",
+            image: "mondelloparkimage",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -724,6 +745,8 @@ extension TrackLocation {
         //Olivers Mount
         TrackLocation(
             name: "Oliver's Mount",
+            place: "Yorkshire",
+            image: "",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -742,6 +765,8 @@ extension TrackLocation {
         //Oultan Park
         TrackLocation(
             name: "Oultan Park",
+            place: "Cheshire",
+            image: "oultanparkimage",
             layouts: 3,
             tracks: [ Track(
                 trackInformation: TrackInformation(
@@ -815,6 +840,8 @@ extension TrackLocation {
         //Pembrey
         TrackLocation(
             name: "Pembrey",
+            place: "Camarthenshire",
+            image: "",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -833,6 +860,8 @@ extension TrackLocation {
         //Silverstone
         TrackLocation(
             name: "Silverstone",
+            place: "Oxfordshire",
+            image: "silverstonecircuitimage",
             layouts: 4,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -929,6 +958,8 @@ extension TrackLocation {
         //Snetterton
         TrackLocation(
             name: "Snetterton",
+            place: "Norfolk",
+            image: "snettertonimage",
             layouts: 1,
             tracks: [Track(
                 trackInformation: TrackInformation(
@@ -956,6 +987,8 @@ extension TrackLocation {
         //Thruxton
         TrackLocation(
             name: "Thruxton",
+            place: "Hampshire",
+            image: "thruxtonimage",
             layouts: 1,
             tracks: [ Track(
                 trackInformation: TrackInformation(

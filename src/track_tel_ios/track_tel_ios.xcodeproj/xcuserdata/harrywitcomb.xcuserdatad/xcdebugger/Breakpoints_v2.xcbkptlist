@@ -18,98 +18,6 @@
             endingLineNumber = "98"
             landmarkName = "SpeedometerPortraitView"
             landmarkType = "14">
-            <Locations>
-               <Location
-                  uuid = "03125E1E-F827-492F-97B3-607AD52D5ED5 - 7c36aa69062b3fd4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of track_tel_ios.SpeedometerPortraitView.locationData : Swift.Optional&lt;__C.CLLocation&gt;"
-                  moduleName = "track_tel_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harrywitcomb/Development/XcodePojects/tracktel-ios/src/track_tel_ios/track_tel_ios/Views/Speedometer/SpeedometerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "03125E1E-F827-492F-97B3-607AD52D5ED5 - ad22b7f67c49e4e5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "track_tel_ios.SpeedometerPortraitView.locationData.getter : Swift.Optional&lt;__C.CLLocation&gt;"
-                  moduleName = "track_tel_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harrywitcomb/Development/XcodePojects/tracktel-ios/src/track_tel_ios/track_tel_ios/Views/Speedometer/SpeedometerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  uuid = "03125E1E-F827-492F-97B3-607AD52D5ED5 - 6e8f2b8abd43ac11"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "track_tel_ios.SpeedometerPortraitView.locationData.setter : Swift.Optional&lt;__C.CLLocation&gt;"
-                  moduleName = "track_tel_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harrywitcomb/Development/XcodePojects/tracktel-ios/src/track_tel_ios/track_tel_ios/Views/Speedometer/SpeedometerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  uuid = "03125E1E-F827-492F-97B3-607AD52D5ED5 - 65d541e73f3b86e0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "track_tel_ios.SpeedometerPortraitView.locationData.modify : Swift.Optional&lt;__C.CLLocation&gt;"
-                  moduleName = "track_tel_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harrywitcomb/Development/XcodePojects/tracktel-ios/src/track_tel_ios/track_tel_ios/Views/Speedometer/SpeedometerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "03125E1E-F827-492F-97B3-607AD52D5ED5 - 12e17947cc4bfbb2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "track_tel_ios.SpeedometerPortraitView.locationData.modify : Swift.Optional&lt;__C.CLLocation&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "track_tel_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harrywitcomb/Development/XcodePojects/tracktel-ios/src/track_tel_ios/track_tel_ios/Views/Speedometer/SpeedometerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "03125E1E-F827-492F-97B3-607AD52D5ED5 - 46b4be21c0d82897"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "track_tel_ios.SpeedometerPortraitView.$locationData.getter : SwiftUI.Binding&lt;Swift.Optional&lt;__C.CLLocation&gt;&gt;"
-                  moduleName = "track_tel_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harrywitcomb/Development/XcodePojects/tracktel-ios/src/track_tel_ios/track_tel_ios/Views/Speedometer/SpeedometerView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "140">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -382,6 +290,22 @@
             endingLineNumber = "167"
             landmarkName = "startNewLap()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75AD064F-5654-4A67-B574-BC67379541ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "track_tel_ios/Views/Trackday/NewTrackDayView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

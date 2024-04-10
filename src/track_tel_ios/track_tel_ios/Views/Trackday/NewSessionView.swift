@@ -21,12 +21,8 @@ struct NewSessionView: View {
         ZStack{
             Color.white.ignoresSafeArea()
             
-            VStack{
-                VStack{
-                    Text("\(track.trackInformation.name)")
-                        .font(.largeTitle)
-                        .fontWeight(.light)
-                        .padding(2)
+            VStack(alignment: .center){
+                VStack(alignment: .leading){
                     Text("\(getFormattedDate(format:"EEEE, MMM d, yyyy",date:Date()))")
                         .fontWeight(.ultraLight)
                         .font(.subheadline)
@@ -34,13 +30,11 @@ struct NewSessionView: View {
                 }
                 TrackDataView(track: track)
                 List{
-                    ForEach (tempTrackday.sessions) { session in
-                        SessionCard(session: session)
+                    ForEach(tempTrackday.sessions.indices) { index in
+                        SessionCard(sessionNumber: index, session: tempTrackday.sessions[index])
                     }
-                    .listRowBackground(Color.swimShortBlue)
-                    .foregroundColor(.white)
                 }
-                .listStyle(.automatic)
+                .listStyle(.plain)
                 .background(Color.white)
                 .scrollContentBackground(.hidden)
 
@@ -62,6 +56,7 @@ struct NewSessionView: View {
                 })
             }
         }
+        .navigationTitle(track.trackInformation.name)
         
 
     }
@@ -72,109 +67,96 @@ struct TrackDataView: View {
     let track: Track
     
     var body: some View{
-        ZStack{
-            Color.swimShortBlue.ignoresSafeArea()
-            
-            
-            VStack(){
-                VStack(alignment: .leading){
-                    Image(track.trackInformation.layout)
-                        .resizable()
-                        .scaledToFit()
-                    
-                }
-                .padding()
-                Spacer()
-                HStack{
-                    Spacer()
-                    VStack(alignment: .leading){
-                        Spacer()
-                        Text(String(track.trackInformation.turns))
-                            .fontWeight(.light)
-                            .font(.title)
-                        Text("Turns")
-                            .fontWeight(.ultraLight)
-                            .font(.subheadline)
-                        Spacer()
-                        Text(String(getFormattedDistance(distance: track.trackInformation.length)))
-                            .fontWeight(.light)
-                            .font(.title)
-                        Text("Miles")
-                            .fontWeight(.ultraLight)
-                            .font(.subheadline)
-                        Spacer()
-                    }
-                    Spacer()
-                    VStack(alignment: .leading){
-                        Text("15 °C")
-                            .fontWeight(.light)
-                            .font(.title)
-                        Text("Temperature")
-                            .fontWeight(.ultraLight)
-                            .font(.subheadline)
-                        Text("32 mp/h")
-                            .fontWeight(.light)
-                            .font(.title)
-                        Text("Wind Speed")
-                            .fontWeight(.ultraLight)
-                            .font(.subheadline)
-                    }
-                    Spacer()
-                }
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.swimShortBlue.ignoresSafeArea())
-                .cornerRadius(16)
+        VStack(){
+            VStack(alignment: .leading){
+                Image(track.trackInformation.layout)
+                    .resizable()
+                    .scaledToFit()
                 
             }
+            .padding()
+            Spacer()
+            HStack{
+                Spacer()
+                VStack(alignment: .leading){
+                    Spacer()
+                    Text(String(track.trackInformation.turns))
+                        .fontWeight(.light)
+                        .font(.title)
+                    Text("Turns")
+                        .fontWeight(.ultraLight)
+                        .font(.subheadline)
+                    Spacer()
+                    Text(String(getFormattedDistance(distance: track.trackInformation.length)))
+                        .fontWeight(.light)
+                        .font(.title)
+                    Text("Miles")
+                        .fontWeight(.ultraLight)
+                        .font(.subheadline)
+                    Spacer()
+                }
+                Spacer()
+                VStack(alignment: .leading){
+                    Text("15 °C")
+                        .fontWeight(.light)
+                        .font(.title)
+                    Text("Temperature")
+                        .fontWeight(.ultraLight)
+                        .font(.subheadline)
+                    Text("32 mp/h")
+                        .fontWeight(.light)
+                        .font(.title)
+                    Text("Wind Speed")
+                        .fontWeight(.ultraLight)
+                        .font(.subheadline)
+                }
+                Spacer()
+            }
+            
+            
         }
-        .cornerRadius(15)
-        .padding()
 
     }
 }
 struct SessionCard: View{
     
+    let sessionNumber: Int
     let session: Session
     
     var body: some View {
         
-        VStack(alignment: .leading){
-            VStack(alignment: .leading){
-                Spacer()
-                Text(getFormattedDate(format:"HH:mm a", date:Date()))
-                    .font(.largeTitle)
-                    .fontWeight(.light)
-                Spacer()
-                Text("\(session.laps.count) Lap(s)")
-                    .font(.title2)
-                    .fontWeight(.ultraLight)
-                Spacer()
-            }
-            .fontWeight(.bold)
-            VStack(alignment: .leading){
-                Spacer()
-                HStack(alignment: .center){
-                    VStack(alignment: .trailing){
-                        Text(String(getFormattedLapTime(lapTime: session.bestLap)))
-                            .fontWeight(.light)
-                            .font(.title)
-                        Text("Best Lap")
-                            .fontWeight(.ultraLight)
-                            .font(.subheadline)
-                    }
-                    VStack(alignment: .trailing){
-                        Text(String(getFormattedLapTime(lapTime: session.averageLap)))
-                            .fontWeight(.light)
-                            .font(.title)
-                        Text("Average Lap")
-                            .fontWeight(.ultraLight)
-                            .font(.subheadline)
-                    }
-                    
+        HStack(alignment: .center){
+            HStack(alignment: .center){
+                VStack(alignment: .leading){
+                    Spacer()
+                    Text("Session \(sessionNumber)")
+                        .font(.headline)
+                        .fontWeight(.light)
+                    Text("\(session.laps.count) Lap(s)")
+                        .font(.subheadline)
+                        .fontWeight(.ultraLight)
+                    Spacer()
                 }
-                .font(.body)
+                .fontWeight(.bold)
                 Spacer()
+                VStack(alignment: .trailing){
+                    Text(String(getFormattedLapTime(lapTime: session.bestLap)))
+                        .fontWeight(.light)
+                        .font(.headline)
+                    Text("Best Lap")
+                        .fontWeight(.ultraLight)
+                        .font(.subheadline)
+                }
+                Spacer()
+                VStack(alignment: .trailing){
+                    Text(String(getFormattedLapTime(lapTime: session.averageLap)))
+                        .fontWeight(.light)
+                        .font(.headline)
+                    Text("Average Lap")
+                        .fontWeight(.ultraLight)
+                        .font(.subheadline)
+                }
+                
             }
         }
         
@@ -193,7 +175,7 @@ struct NewSessionView_Previews: PreviewProvider {
                 length: 1.8,
                 turns: 8,
                 isCircuit: true,
-                layout: "abingdon_map",
+                layout: "Abingdon Main",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(

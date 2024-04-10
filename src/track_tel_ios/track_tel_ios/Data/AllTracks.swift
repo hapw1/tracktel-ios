@@ -17,7 +17,7 @@ extension Track {
                 length: 1.8,
                 turns: 8,
                 isCircuit: true,
-                layout: "Abingdon Main",
+                layout: "abingdonimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -40,7 +40,7 @@ extension Track {
                 length: 2.1,
                 turns: 10,
                 isCircuit: true,
-                layout: "Anglesey International",
+                layout: "angleseycircuitimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -63,7 +63,7 @@ extension Track {
                 length: 1.7,
                 turns: 0,
                 isCircuit: true,
-                layout: "bedford_map",
+                layout: "bedfordautodromeimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -86,7 +86,7 @@ extension Track {
                 length: 1.6,
                 turns: 9,
                 isCircuit: true,
-                layout: "blyton_map",
+                layout: "blytonparkimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -109,7 +109,7 @@ extension Track {
                 length: 1.2,
                 turns: 6,
                 isCircuit: true,
-                layout: "brandshatch_map",
+                layout: "brandshatchimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -132,7 +132,7 @@ extension Track {
                 length: 2.173,
                 turns: 11,
                 isCircuit: true,
-                layout: "cadwellpark_map",
+                layout: "cadwellparkimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -155,7 +155,7 @@ extension Track {
                 length: 1.198,
                 turns: 6,
                 isCircuit: true,
-                layout: "castlecombe_map",
+                layout: "castlecombeimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -178,7 +178,7 @@ extension Track {
                 length: 2.127,
                 turns: 10,
                 isCircuit: true,
-                layout: "croft_mapgif",
+                layout: "croftcircuitimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -201,7 +201,7 @@ extension Track {
                 length: 2.5,
                 turns: 9,
                 isCircuit: true,
-                layout: "donington_trackguide",
+                layout: "doningtonparkimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -224,7 +224,7 @@ extension Track {
                 length: 2.367,
                 turns: 9,
                 isCircuit: true,
-                layout: "goodwood_map",
+                layout: "goodwoodcircuitimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -247,7 +247,7 @@ extension Track {
                 length: 1.5,
                 turns: 0,
                 isCircuit: true,
-                layout: "kirkistown_map",
+                layout: "kirkistownimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -270,7 +270,7 @@ extension Track {
                 length: 1.3,
                 turns: 8,
                 isCircuit: true,
-                layout: "knockhill_map",
+                layout: "knockhillimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -293,7 +293,7 @@ extension Track {
                 length: 1,
                 turns: 7,
                 isCircuit: true,
-                layout: "lyddenhill_map",
+                layout: "lyddenhillimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -316,7 +316,7 @@ extension Track {
                 length: 1.198,
                 turns: 6,
                 isCircuit: true,
-                layout: "mallorypark_map",
+                layout: "malloryparkimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -339,7 +339,7 @@ extension Track {
                 length: 2.268,
                 turns: 13,
                 isCircuit: true,
-                layout: "mondellopark_map",
+                layout: "mondelloparkimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -362,7 +362,7 @@ extension Track {
                 length: 2.692,
                 turns: 8,
                 isCircuit: true,
-                layout: "oulton_map",
+                layout: "oultanparkimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -385,7 +385,7 @@ extension Track {
                 length: 0.64,
                 turns: 8,
                 isCircuit: false,
-                layout: "Main",
+                layout: "prescotthillclimbimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -408,7 +408,7 @@ extension Track {
                 length: 3.67,
                 turns: 18,
                 isCircuit: true,
-                layout: "silverstone_map",
+                layout: "silverstonecircuitimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -431,7 +431,7 @@ extension Track {
                 length: 1.952,
                 turns: 7,
                 isCircuit: true,
-                layout: "snetterton_map",
+                layout: "snettertonimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
@@ -454,7 +454,7 @@ extension Track {
                 length: 2.356,
                 turns: 11,
                 isCircuit: true,
-                layout: "thruxton_track",
+                layout: "thruxtonimage",
                 distanceFromUser: 0.0),
             timingInformation: TimingInformation(
                 timingLineLeft: LatLng(
