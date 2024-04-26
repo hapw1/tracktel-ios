@@ -46,15 +46,23 @@ struct LayoutCard: View {
                 VStack (alignment: .leading){
                     Text(layout.trackInformation.name)
                         .font(.title)
+                        .fontWeight(.light)
                     Spacer()
                     Text("Personal Best: \(getFormattedLapTime(lapTime: Double(layout.personalBestInformation.bestLap)))")
+                        .fontWeight(.light)
+                        .font(.subheadline)
                     Text("\(getFormattedDistance(distance: layout.trackInformation.length)) miles")
                         .font(.subheadline)
+                        .fontWeight(.light)
+
                         
                     Text("\(layout.trackInformation.turns) turns")
                         .font(.subheadline)
+                        .fontWeight(.light)
+
 
                 }
+                .foregroundColor(.black)
                 .padding()
                 .frame(height: 150)
                 

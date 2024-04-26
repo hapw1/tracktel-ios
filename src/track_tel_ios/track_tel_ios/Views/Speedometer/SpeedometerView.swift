@@ -104,6 +104,7 @@ struct SpeedometerPortraitView: View {
             Spacer()
             Speedometer(
                 units: $units)
+            .environmentObject(locationDataManager)
             Spacer()
             InformationView(units: units)
                 .padding()
@@ -116,10 +117,13 @@ struct SpeedometerPortraitView: View {
                         sessionInProgress = false
                         locationDataManager.locationManager.stopUpdatingLocation()
                         self.presentationMode.wrappedValue.dismiss()
+                        print("not updating location")
+
                         
                     }else {
                         sessionInProgress = true
                         locationDataManager.locationManager.startUpdatingLocation()
+                        print("updating location")
                     }
                 }, label: {
                     if sessionInProgress {
@@ -165,9 +169,6 @@ struct InformationView: View {
 
         }
         .padding()
-        .foregroundColor(.black)
-        .background(Color.accentTeal.ignoresSafeArea().opacity(0.2))
-        .cornerRadius(15)
         
 
         
@@ -189,14 +190,14 @@ struct SpeedStats: View {
             let formattedAverage = convertSpeed(speed: locationDataManager.averageSpeed, units: units)
             let formattedVMax = convertSpeed(speed: locationDataManager.vMax, units: units)
             Text("\(Int(formattedAverage)) \(unitsToDisplay)")
-                .fontWeight(.light)
+                .fontWeight(.ultraLight)
                 .font(.largeTitle)
             Text("Average")
                 .fontWeight(.ultraLight)
                 .font(.subheadline)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 0))
             Text("\(Int(formattedVMax)) \(unitsToDisplay)")
-                .fontWeight(.light)
+                .fontWeight(.ultraLight)
                 .font(.largeTitle)
             Text("VMax")
                 .fontWeight(.ultraLight)
@@ -218,7 +219,7 @@ struct DistanceStats: View {
             let unitsToDisplay = units ? "KM" : "Miles"
             let formattedDistance = getFormattedDistance(distance: locationDataManager.distanceTravelled, units: units)
             Text("\(formattedDistance) \(unitsToDisplay)")
-                .fontWeight(.light)
+                .fontWeight(.ultraLight)
                 .font(.largeTitle)
             Text("Distance")
                 .fontWeight(.ultraLight)

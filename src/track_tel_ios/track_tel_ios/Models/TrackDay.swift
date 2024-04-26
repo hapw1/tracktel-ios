@@ -22,7 +22,7 @@ struct TrackDay: Identifiable, Codable {
     }
     
     init(){
-        self.init(trackName: "", date: Date(), sessions: [Session()])
+        self.init(trackName: "", date: Date(), sessions: [])
     }
     
     var lapsCompleted: Int {
@@ -30,6 +30,7 @@ struct TrackDay: Identifiable, Codable {
         for session in sessions {
             tempLapCount += session.laps.count
         }
+        
         return tempLapCount
     }
     
@@ -44,6 +45,7 @@ struct TrackDay: Identifiable, Codable {
                 }
             }
         }
+        
         return tempBestLap
     }
     
@@ -56,6 +58,7 @@ struct TrackDay: Identifiable, Codable {
                 tempAverageLap +=  Double(lap)
             }
         }
+        
         return (tempAverageLap / Double(laps))
     }
     
@@ -68,6 +71,7 @@ struct TrackDay: Identifiable, Codable {
                 tempVMax = session.vMax
             }
         }
+        
         return tempVMax
     }
 }

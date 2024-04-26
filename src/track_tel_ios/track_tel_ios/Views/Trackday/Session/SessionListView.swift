@@ -12,19 +12,17 @@ struct SessionListView: View {
 
     var body: some View {
         List{
-            ForEach(sessions){session in
+            ForEach(sessions.indices){ index in
                 NavigationLink(
-                    destination: SessionDetailView(session: session),
+                    destination: SessionDetailView(sessionNumber: index, session: sessions[index]),
                     label: {
-                        SessionOverviewCard(session: session)
+                        SessionOverviewCard(session: sessions[index])
                     })
             }
-            .listRowBackground(Color.swimShortBlue)
-            .foregroundColor(.white)
             
         }
-        .listStyle(.automatic)
-        .background(Color.white)
+        .navigationTitle("Sessions")
+        .listStyle(.plain)
         .scrollContentBackground(.hidden)
     }
 }
@@ -35,21 +33,21 @@ struct SessionOverviewCard: View{
         VStack{
             Text(getFormattedDate(format:"HH:mm a", date:session.time))
                 .fontWeight(.light)
-                .font(.system(size: 26))
+                .font(.largeTitle)
                 .padding()
             HStack{
                 VStack(alignment: .leading){
                     Spacer()
                     Text("\(getFormattedLapTime(lapTime:session.bestLap))")
                         .fontWeight(.light)
-                        .font(.title)
+                        .font(.headline)
                     Text("Best Lap")
                         .fontWeight(.ultraLight)
                         .font(.subheadline)
                     Spacer()
                     Text("\(getFormattedLapTime(lapTime:session.averageLap))")
                         .fontWeight(.light)
-                        .font(.title)
+                        .font(.headline)
                     Text("Average Lap")
                         .fontWeight(.ultraLight)
                         .font(.subheadline)
@@ -60,14 +58,14 @@ struct SessionOverviewCard: View{
                     Spacer()
                     Text("\(String(format: "%.0f", session.vMax)) mp/h")
                         .fontWeight(.light)
-                        .font(.title)
+                        .font(.headline)
                     Text("vMax")
                         .fontWeight(.ultraLight)
                         .font(.subheadline)
                     Spacer()
                     Text("\(session.laps.count)")
                         .fontWeight(.light)
-                        .font(.title)
+                        .font(.headline)
                     Text("Lap(s)")
                         .fontWeight(.ultraLight)
                         .font(.subheadline)

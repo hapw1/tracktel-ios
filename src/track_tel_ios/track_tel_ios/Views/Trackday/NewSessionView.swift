@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NewSessionView: View {
     
+    var weatherManager = WeatherManager()
     @EnvironmentObject private var trackDayData : TrackDayData
     @State var tempTrackday : TrackDay = TrackDay()
     
@@ -29,10 +30,12 @@ struct NewSessionView: View {
                         .padding()
                 }
                 TrackDataView(track: track)
+                    .environmentObject(weatherManager)
                 List{
-                    ForEach(tempTrackday.sessions.indices) { index in
+                    ForEach(tempTrackday.sessions.indices, id: \.self) { index in
                         SessionCard(sessionNumber: index, session: tempTrackday.sessions[index])
                     }
+                    
                 }
                 .listStyle(.plain)
                 .background(Color.white)
@@ -64,8 +67,10 @@ struct NewSessionView: View {
 
 struct TrackDataView: View {
     
+    @EnvironmentObject var weatherManager: WeatherManager
     let track: Track
-    
+    @State var weather: ResponseBody?
+
     var body: some View{
         VStack(){
             VStack(alignment: .leading){
@@ -74,6 +79,7 @@ struct TrackDataView: View {
                     .scaledToFit()
                 
             }
+            
             .padding()
             Spacer()
             HStack{
@@ -97,18 +103,32 @@ struct TrackDataView: View {
                 }
                 Spacer()
                 VStack(alignment: .leading){
-                    Text("15 °C")
-                        .fontWeight(.light)
-                        .font(.title)
-                    Text("Temperature")
-                        .fontWeight(.ultraLight)
-                        .font(.subheadline)
-                    Text("32 mp/h")
-                        .fontWeight(.light)
-                        .font(.title)
-                    Text("Wind Speed")
-                        .fontWeight(.ultraLight)
-                        .font(.subheadline)
+                    
+                    if let weather = weather {
+                        Text(String(format: "%.0.f",weather.main.temp) + " °C")
+                            .fontWeight(.light)
+                            .font(.title)
+                        Text("Temperature")
+                            .fontWeight(.ultraLight)
+                            .font(.subheadline)
+                        Text(String(format: "%.0f", weather.wind.speed * 3.6) + " MPH")
+                            .fontWeight(.light)
+                            .font(.title)
+                        Text("Wind Speed")
+                            .fontWeight(.ultraLight)
+                            .font(.subheadline)
+                    } else {
+                        ProgressView()
+                            .task {
+                                do {
+                                    try await
+                                    weather = weatherManager.getCurrentWeather(latitude: track.timingInformation.geofenceLocation.latitude, longitude: track.timingInformation.geofenceLocation.longitude)
+                                }catch {
+                                    print("Error getting weather")
+                                }
+                            }
+                    }
+                    
                 }
                 Spacer()
             }

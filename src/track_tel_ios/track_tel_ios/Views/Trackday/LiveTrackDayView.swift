@@ -78,6 +78,7 @@ struct LiveTrackDayLandscapeView: View {
             }
             EndSessionButton()
         }
+        
     }
 }
 
@@ -101,7 +102,13 @@ struct LiveTrackDayPortraitView: View {
             Spacer()
             LapTimerView(geoTimingManager: geoTimingManager, tempTrackday: $tempTrackday, track: track)
             Spacer()
-            Speedometer(units: $units)
+            //Speedometer(units: $units)
+            Text(String(geoTimingManager.locationManager.location?.speed ?? 10))
+                .font(.title)
+                .fontWeight(.light)
+            Text(units ? "KPH" : "MPH")
+                .font(.subheadline)
+                .fontWeight(.ultraLight)
             Spacer()
             LapsCompletedView(geoTimingManager: geoTimingManager)
             Spacer()
@@ -149,15 +156,18 @@ struct LapTimerView: View {
         .onDisappear{
             //geoTimingManager.removeGeofence()
 
-            tempTrackday.sessions[0].averageLap = geoTimingManager.averageLapTime
-            tempTrackday.sessions[0].bestLap = geoTimingManager.bestLapTime
-            tempTrackday.sessions.append(
-                Session(
-                    time: Date(),
-                    bestLap: geoTimingManager.bestLapTime,
-                    averageLap: geoTimingManager.averageLapTime,
-                    laps: geoTimingManager.laps,
-                    vMax: geoTimingManager.vMax))
+            //tempTrackday.sessions[0].averageLap = geoTimingManager.averageLapTime
+            //tempTrackday.sessions[0].bestLap = geoTimingManager.bestLapTime
+            if geoTimingManager.laps.count > 0 {
+                tempTrackday.sessions.append(
+                    Session(
+                        time: Date(),
+                        bestLap: geoTimingManager.bestLapTime,
+                        averageLap: geoTimingManager.averageLapTime,
+                        laps: geoTimingManager.laps,
+                        vMax: geoTimingManager.vMax))
+            }
+            
 
         }
         

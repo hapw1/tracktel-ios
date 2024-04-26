@@ -20,6 +20,7 @@ class LocationDataManager: NSObject, ObservableObject, CLLocationManagerDelegate
     @Published var bestLapTime: Double = 0.0
     @Published var laps: [Double] = [0.0]
     
+    @Published var speed: CLLocationSpeed = 0.0
     @Published var averageSpeed: CLLocationSpeed = 0.0
     @Published var vMax: CLLocationSpeed = 0.0
     @Published var distanceTravelled: CLLocationDistance = 0.0
@@ -41,6 +42,11 @@ class LocationDataManager: NSObject, ObservableObject, CLLocationManagerDelegate
     func requestLocation(){
         locationManager.startUpdatingLocation()
         locationManager.distanceFilter = kCLDistanceFilterNone
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        speed = manager.location?.speed ?? 0
+        print(speed)
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {

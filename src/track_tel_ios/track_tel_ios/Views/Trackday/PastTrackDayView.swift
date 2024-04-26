@@ -14,8 +14,9 @@ struct PastTrackDayView: View {
     
 
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: [GridItem(.flexible())]){
+        
+        VStack{
+            List{
                 ForEach(trackDayData.trackDays) { trackday in
                     NavigationLink(
                         destination: SessionListView(sessions: trackday.sessions)
@@ -23,18 +24,14 @@ struct PastTrackDayView: View {
                         ,
                         label: {TrackDayCard(trackDay: trackday)
                         })
-                    .padding()
                 }
             }
-            .padding()
-            .foregroundColor(.black)
         }
-        
+        .listStyle(.plain)
         .navigationTitle("Past Track Days")
         .onAppear{
             trackDayData.loadTrackDays()
         }
-        .listStyle(.automatic)
         .scrollContentBackground(.hidden)
     }
 }
@@ -63,14 +60,14 @@ struct TrackDayCard: View {
                     Spacer()
                     Text("\(getFormattedLapTime(lapTime:trackDay.bestLap))")
                         .fontWeight(.light)
-                        .font(.title)
+                        .font(.headline)
                     Text("Best Lap")
                         .fontWeight(.ultraLight)
                         .font(.subheadline)
                     Spacer()
                     Text("\(getFormattedLapTime(lapTime:trackDay.averageLap))")
                         .fontWeight(.light)
-                        .font(.title)
+                        .font(.headline)
                     Text("Average Lap")
                         .fontWeight(.ultraLight)
                         .font(.subheadline)
@@ -81,7 +78,7 @@ struct TrackDayCard: View {
                     Spacer()
                     Text("\(String(format: "%.0f", trackDay.vMax)) mp/h")
                         .fontWeight(.light)
-                        .font(.title)
+                        .font(.headline)
                     Text("vMax")
                         .fontWeight(.ultraLight)
                         .font(.subheadline)
@@ -89,7 +86,7 @@ struct TrackDayCard: View {
                     
                     Text("\(trackDay.lapsCompleted)")
                         .fontWeight(.light)
-                        .font(.title)
+                        .font(.headline)
                     Text("Laps")
                         .fontWeight(.ultraLight)
                         .font(.subheadline)
@@ -98,9 +95,6 @@ struct TrackDayCard: View {
             }
             
         }
-        .padding()
-        .background(Color.accentTeal.opacity(0.2))
-        .cornerRadius(10)
     }
 }
 

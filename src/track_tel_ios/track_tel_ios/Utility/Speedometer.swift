@@ -24,16 +24,18 @@ struct Speedometer: View {
                         .stroke(Color.black.opacity(0.1), lineWidth: 20)
                         .frame(width: 280, height: 280)
                     Circle()
-                        .trim(from: 0, to: self.setSpeed(speed: convertSpeed(speed: locationDataManager.locationManager.location?.speed ?? 0, units: units)))
+                        .trim(from: 0, to: self.setSpeed(speed: convertSpeed(speed: locationDataManager.locationManager.location?.speed ?? 10, units: units)))
                         .stroke(AngularGradient(gradient: .init(colors: self.colors), center: .center, angle: .init(degrees: 180)), lineWidth: 20)
                         .frame(width: 280, height: 280)
                     VStack{
                         let unit = units ? "KPH" : "MPH"
-                        let formattedSpeed = convertSpeed(speed: locationDataManager.locationManager.location?.speed ?? 0, units: units)
+                        let formattedSpeed = convertSpeed(speed: locationDataManager.speed, units: units)
                         Text("\(Int(formattedSpeed))")
-                            .font(.system(size: 36))
+                            .font(.largeTitle)
+                            .fontWeight(.ultraLight)
                         Text(unit)
-                            .font(.system(size: 24))
+                            .font(.title)
+                            .fontWeight(.ultraLight)
                     }
                     .rotationEffect(Angle(degrees: 235))
 
